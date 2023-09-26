@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+       
+
+    
+
+        var ex = $('.ex1');
+        $('.place').focus(function(){
+            ex.text($(this).attr('title'));      
+        }).keyup(function(){
+            if($(this).val() == 'pontocom'){
+                $('.ev2').focus();
+            }
+        });
+
+        /*$('.ev1').blur(function(){
+
+                ex.text("Saída do campo: " +$(this).attr('name'));
+
+                
+        });*/
+    });
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="ex1">Aguardando ação</div>
+
+    <form action="">
+        <label for="nome">
+            <input type="text" name="nome" class="place ev1" title="Digite seu nome">
+        </label>
+
+        <label for="email">
+            <input type="text" name="email" class="place ev2" title="Digite seu email">
+        </label>
+
+        <label for="cidade">
+            <input type="text" class="place" title="Digite sua cidade">
+        </label>
+
+        <label for="nome">
+            <textarea name="" class="place key" title="Digite uma mensagem" cols="10" rows="3"></textarea>
+        </label>
+        <label>
+            <button>Botão</button>
+            <button>Enviar</button>
+        </label>
+    </form>
+</body>
+</html>
